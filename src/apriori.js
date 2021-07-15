@@ -101,11 +101,13 @@ const pruning = (ck, fkm1) => {
         return fre.itemset.indexOf(item);
       });
       let m1Count = 0;
+      // Verificar si existen los valores en el array
       indexArray.forEach((val) => {
         if (val !== -1) {
           m1Count++;
         }
       });
+      // Esto es para verificar de que todos los elementos de `fre` se encontraron
       if (m1Count === fre.itemset.length) {
         ocurrencyCount++;
       }
